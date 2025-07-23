@@ -115,7 +115,7 @@ class RandomIntegerGenerator extends RandomGenerator {
 }
 ```
 ### Answer
-The code snippet provided consists of two classes: **RandomGenerator**, which attempts to return random objects of different types, and **RandomIntegerGenerator**, whic is an extension of the previous class  and tries to override it to return an Integer.
+The code snippet provided consists of two classes: **RandomGenerator**, which attempts to return random objects of different types, and **RandomIntegerGenerator**, which is an extension of the previous class  and tries to override it to return an Integer.
 
 Altough the classes may seem to work at first glance, they are not able to compile. This is mainly due to the following segment:
 
@@ -124,6 +124,6 @@ Altough the classes may seem to work at first glance, they are not able to compi
     Integer generate()
 ```
 
-Since the **RandomGenerator** class can return an Object of various types, not exclusively an Integer, the subclass method attempting to override it with only an Integer return type lead to the compiling error.
+Since the **RandomGenerator** class can return an Object of various types, not exclusively an Integer, the subclass method attempting to override it with only an Integer return type leads to the compiling error.
 
 For the code to properly work, the return type should be consistent with the superclass method, such as still returning an Object, or the superclass itself should use generics to allow subclasses to specify the return type.
